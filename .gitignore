@@ -92,3 +92,9 @@ iOSInjectionProject/
 # Json files contains the configuration. 
 *.json
 
+.DS_Store
+
+#Pod 
+
+Pods
+Podfile.lock

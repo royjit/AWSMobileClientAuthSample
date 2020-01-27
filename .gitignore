@@ -90,7 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 # Json files contains the configuration. 
-*.json
+AWSMobileClientAuthSample/Resources/*.json
 
 .DS_Store
 

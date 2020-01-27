@@ -14,15 +14,15 @@
 		B434704123DB992100564018 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B434703E23DB992100564018 /* SceneDelegate.swift */; };
 		B434704723DBAB6000564018 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B434704623DBAB6000564018 /* AuthType.swift */; };
 		B4F90D6823DD4EF80056341D /* ConfigurationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D6723DD4EF80056341D /* ConfigurationParser.swift */; };
-		B4F90D6E23DD541B0056341D /* userPoolConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D6D23DD541B0056341D /* userPoolConfiguration.json */; };
 		B4F90D7E23DE9CF20056341D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7723DE9CF20056341D /* AuthViewController.swift */; };
 		B4F90D7F23DE9CF20056341D /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7823DE9CF20056341D /* CredentialsViewController.swift */; };
 		B4F90D8023DE9CF20056341D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7923DE9CF20056341D /* HomeViewController.swift */; };
 		B4F90D8123DE9CF20056341D /* DropInUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7B23DE9CF20056341D /* DropInUIViewController.swift */; };
 		B4F90D8223DE9CF20056341D /* UserPoolSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7D23DE9CF20056341D /* UserPoolSignInViewController.swift */; };
 		B4F90D8423DE9D440056341D /* AWSMobileClientBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D8323DE9D440056341D /* AWSMobileClientBaseViewController.swift */; };
-		B4F90D8723DE9DC20056341D /* dropInUIConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8623DE9DC20056341D /* dropInUIConfiguration.json */; };
-		B4F90D8A23DE9E0A0056341D /* customAuthUserPoolConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8923DE9E0A0056341D /* customAuthUserPoolConfiguration.json */; };
+		B4F90D8F23DEAFD30056341D /* dropInUIConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8C23DEAFD30056341D /* dropInUIConfiguration.json */; };
+		B4F90D9023DEAFD30056341D /* customAuthUserPoolConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8D23DEAFD30056341D /* customAuthUserPoolConfiguration.json */; };
+		B4F90D9123DEAFD30056341D /* userPoolConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8E23DEAFD30056341D /* userPoolConfiguration.json */; };
 		D981F334230AD1F4BFADAFCE /* Pods_AWSMobileClientAuthSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96515DD047DBA2BFEF2036 /* Pods_AWSMobileClientAuthSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,15 +37,15 @@
 		B434703E23DB992100564018 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B434704623DBAB6000564018 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
 		B4F90D6723DD4EF80056341D /* ConfigurationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationParser.swift; sourceTree = "<group>"; };
-		B4F90D6D23DD541B0056341D /* userPoolConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userPoolConfiguration.json; sourceTree = "<group>"; };
 		B4F90D7723DE9CF20056341D /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B4F90D7823DE9CF20056341D /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 		B4F90D7923DE9CF20056341D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B4F90D7B23DE9CF20056341D /* DropInUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropInUIViewController.swift; sourceTree = "<group>"; };
 		B4F90D7D23DE9CF20056341D /* UserPoolSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPoolSignInViewController.swift; sourceTree = "<group>"; };
 		B4F90D8323DE9D440056341D /* AWSMobileClientBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSMobileClientBaseViewController.swift; sourceTree = "<group>"; };
-		B4F90D8623DE9DC20056341D /* dropInUIConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dropInUIConfiguration.json; sourceTree = "<group>"; };
-		B4F90D8923DE9E0A0056341D /* customAuthUserPoolConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = customAuthUserPoolConfiguration.json; sourceTree = "<group>"; };
+		B4F90D8C23DEAFD30056341D /* dropInUIConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dropInUIConfiguration.json; sourceTree = "<group>"; };
+		B4F90D8D23DEAFD30056341D /* customAuthUserPoolConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customAuthUserPoolConfiguration.json; sourceTree = "<group>"; };
+		B4F90D8E23DEAFD30056341D /* userPoolConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userPoolConfiguration.json; sourceTree = "<group>"; };
 		F0B5F28DAC374DA72F53D5BA /* Pods-AWSMobileClientAuthSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSMobileClientAuthSample.debug.xcconfig"; path = "Target Support Files/Pods-AWSMobileClientAuthSample/Pods-AWSMobileClientAuthSample.debug.xcconfig"; sourceTree = "<group>"; };
 		FE96515DD047DBA2BFEF2036 /* Pods_AWSMobileClientAuthSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSMobileClientAuthSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,7 +100,7 @@
 		B434702623DB98B100564018 /* AWSMobileClientAuthSample */ = {
 			isa = PBXGroup;
 			children = (
-				B4F90D6B23DD541B0056341D /* Resources */,
+				B4F90D8B23DEAFD30056341D /* Resources */,
 				B434703B23DB992100564018 /* Source */,
 				B434702D23DB98B100564018 /* Main.storyboard */,
 				B434703023DB98B300564018 /* Assets.xcassets */,
@@ -138,24 +138,6 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		B4F90D6B23DD541B0056341D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B4F90D8823DE9DED0056341D /* CustomAuthUserPoolConfig */,
-				B4F90D8523DE9DA70056341D /* DropInUIConfig */,
-				B4F90D6C23DD541B0056341D /* UserPoolConfig */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		B4F90D6C23DD541B0056341D /* UserPoolConfig */ = {
-			isa = PBXGroup;
-			children = (
-				B4F90D6D23DD541B0056341D /* userPoolConfiguration.json */,
-			);
-			path = UserPoolConfig;
-			sourceTree = "<group>";
-		};
 		B4F90D7623DE9CF20056341D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,20 +167,14 @@
 			path = UserPoolCustomUI;
 			sourceTree = "<group>";
 		};
-		B4F90D8523DE9DA70056341D /* DropInUIConfig */ = {
+		B4F90D8B23DEAFD30056341D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B4F90D8623DE9DC20056341D /* dropInUIConfiguration.json */,
+				B4F90D8C23DEAFD30056341D /* dropInUIConfiguration.json */,
+				B4F90D8D23DEAFD30056341D /* customAuthUserPoolConfiguration.json */,
+				B4F90D8E23DEAFD30056341D /* userPoolConfiguration.json */,
 			);
-			path = DropInUIConfig;
-			sourceTree = "<group>";
-		};
-		B4F90D8823DE9DED0056341D /* CustomAuthUserPoolConfig */ = {
-			isa = PBXGroup;
-			children = (
-				B4F90D8923DE9E0A0056341D /* customAuthUserPoolConfiguration.json */,
-			);
-			path = CustomAuthUserPoolConfig;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,11 +237,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4F90D8A23DE9E0A0056341D /* customAuthUserPoolConfiguration.json in Resources */,
-				B4F90D6E23DD541B0056341D /* userPoolConfiguration.json in Resources */,
+				B4F90D8F23DEAFD30056341D /* dropInUIConfiguration.json in Resources */,
+				B4F90D9123DEAFD30056341D /* userPoolConfiguration.json in Resources */,
+				B4F90D9023DEAFD30056341D /* customAuthUserPoolConfiguration.json in Resources */,
 				B434703423DB98B300564018 /* LaunchScreen.storyboard in Resources */,
 				B434703123DB98B300564018 /* Assets.xcassets in Resources */,
-				B4F90D8723DE9DC20056341D /* dropInUIConfiguration.json in Resources */,
 				B434702F23DB98B100564018 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

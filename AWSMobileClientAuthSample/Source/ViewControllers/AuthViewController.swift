@@ -62,7 +62,7 @@ class AuthViewController: UIViewController {
 
     func initializeMobileClient() {
         let configuration = ConfigurationParser.fetchConfiguration(for: authType)
-        AWSInfo.configureDefaultAWSInfo(configuration)
+        _ = AWSMobileClient(configuration: configuration)
         AWSMobileClient.default().initialize { (userState, error) in
             if let error = error {
                 print ("AWSMobileClient Initialize - \(error)")

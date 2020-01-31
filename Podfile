@@ -11,4 +11,8 @@ target 'AWSMobileClientAuthSample' do
   pod 'AWSAuthUI', SDK_Version
   pod 'AWSUserPoolsSignIn', SDK_Version
 
+  pod 'AWSFacebookSignIn', SDK_Version
+  pod 'AWSGoogleSignIn', SDK_Version
+  pod 'GoogleSignIn', '~> 4.0'
+
 end

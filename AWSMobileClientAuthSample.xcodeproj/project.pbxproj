@@ -23,6 +23,9 @@
 		B4F90D8F23DEAFD30056341D /* dropInUIConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8C23DEAFD30056341D /* dropInUIConfiguration.json */; };
 		B4F90D9023DEAFD30056341D /* customAuthUserPoolConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8D23DEAFD30056341D /* customAuthUserPoolConfiguration.json */; };
 		B4F90D9123DEAFD30056341D /* userPoolConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F90D8E23DEAFD30056341D /* userPoolConfiguration.json */; };
+		B4F90D9323DF47DC0056341D /* UserPoolSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D9223DF47DC0056341D /* UserPoolSignUpViewController.swift */; };
+		B4F90D9523DF47F90056341D /* UserPoolConfirmSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D9423DF47F90056341D /* UserPoolConfirmSignInViewController.swift */; };
+		B4F90D9723DF48070056341D /* UserPoolConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D9623DF48070056341D /* UserPoolConfirmSignUpViewController.swift */; };
 		D981F334230AD1F4BFADAFCE /* Pods_AWSMobileClientAuthSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96515DD047DBA2BFEF2036 /* Pods_AWSMobileClientAuthSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,9 @@
 		B4F90D8C23DEAFD30056341D /* dropInUIConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dropInUIConfiguration.json; sourceTree = "<group>"; };
 		B4F90D8D23DEAFD30056341D /* customAuthUserPoolConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customAuthUserPoolConfiguration.json; sourceTree = "<group>"; };
 		B4F90D8E23DEAFD30056341D /* userPoolConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userPoolConfiguration.json; sourceTree = "<group>"; };
+		B4F90D9223DF47DC0056341D /* UserPoolSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoolSignUpViewController.swift; sourceTree = "<group>"; };
+		B4F90D9423DF47F90056341D /* UserPoolConfirmSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoolConfirmSignInViewController.swift; sourceTree = "<group>"; };
+		B4F90D9623DF48070056341D /* UserPoolConfirmSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoolConfirmSignUpViewController.swift; sourceTree = "<group>"; };
 		F0B5F28DAC374DA72F53D5BA /* Pods-AWSMobileClientAuthSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSMobileClientAuthSample.debug.xcconfig"; path = "Target Support Files/Pods-AWSMobileClientAuthSample/Pods-AWSMobileClientAuthSample.debug.xcconfig"; sourceTree = "<group>"; };
 		FE96515DD047DBA2BFEF2036 /* Pods_AWSMobileClientAuthSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSMobileClientAuthSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,6 +169,9 @@
 			isa = PBXGroup;
 			children = (
 				B4F90D7D23DE9CF20056341D /* UserPoolSignInViewController.swift */,
+				B4F90D9223DF47DC0056341D /* UserPoolSignUpViewController.swift */,
+				B4F90D9423DF47F90056341D /* UserPoolConfirmSignInViewController.swift */,
+				B4F90D9623DF48070056341D /* UserPoolConfirmSignUpViewController.swift */,
 			);
 			path = UserPoolCustomUI;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 				B434702123DB98B100564018 /* Frameworks */,
 				B434702223DB98B100564018 /* Resources */,
 				6E96B854E792DFD5AD55CF96 /* [CP] Embed Pods Frameworks */,
+				17C6C7FF89777C747D5D23CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +259,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17C6C7FF89777C747D5D23CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSMobileClientAuthSample/Pods-AWSMobileClientAuthSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSMobileClientAuthSample/Pods-AWSMobileClientAuthSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSMobileClientAuthSample/Pods-AWSMobileClientAuthSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E96B854E792DFD5AD55CF96 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,11 +326,14 @@
 				B4F90D8123DE9CF20056341D /* DropInUIViewController.swift in Sources */,
 				B434704023DB992100564018 /* AppDelegate.swift in Sources */,
 				B4F90D7F23DE9CF20056341D /* CredentialsViewController.swift in Sources */,
+				B4F90D9323DF47DC0056341D /* UserPoolSignUpViewController.swift in Sources */,
 				B434704723DBAB6000564018 /* AuthType.swift in Sources */,
 				B4F90D7E23DE9CF20056341D /* AuthViewController.swift in Sources */,
 				B434704123DB992100564018 /* SceneDelegate.swift in Sources */,
 				B4F90D8023DE9CF20056341D /* HomeViewController.swift in Sources */,
+				B4F90D9723DF48070056341D /* UserPoolConfirmSignUpViewController.swift in Sources */,
 				B4F90D6823DD4EF80056341D /* ConfigurationParser.swift in Sources */,
+				B4F90D9523DF47F90056341D /* UserPoolConfirmSignInViewController.swift in Sources */,
 				B4F90D8223DE9CF20056341D /* UserPoolSignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

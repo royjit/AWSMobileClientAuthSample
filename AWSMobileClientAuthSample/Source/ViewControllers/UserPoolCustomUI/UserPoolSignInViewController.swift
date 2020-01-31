@@ -64,7 +64,7 @@ class UserPoolSignInViewController: AWSMobileClientBaseViewController {
     }
 
     @IBAction func signUpAction(_ sender: Any) {
-
+        
     }
 
     @IBAction func confirmSignUp(_ sender: Any) {

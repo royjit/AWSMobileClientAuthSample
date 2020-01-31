@@ -18,3 +18,6 @@ When you pick an option from the view controller, the app initializes the AWSMob
 1. Follow the steps from the list below for each use case to create the configuration files.
 
 
+#### Configuration setup for each flow
+
+1. [Username password flow with Custom UI](./Documentation/UserPoolCustomUI.md)

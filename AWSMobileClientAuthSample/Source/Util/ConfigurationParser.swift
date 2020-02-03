@@ -46,6 +46,8 @@ struct ConfigurationParser {
             return "dropInUIConfiguration"
         case .customAuthUserPool:
             return "customAuthUserPoolConfiguration"
+        case .hostedUI:
+            return "hostedUIConfiguration"
         }
 
     }

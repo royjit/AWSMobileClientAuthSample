@@ -14,6 +14,7 @@ class UserPoolSignUpViewController: AWSMobileClientBaseViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var phoneNumberTF: UITextField!
 
     @IBAction func signUpAction(_ sender: Any) {
         guard let username = userNameTF.text else {
@@ -30,17 +31,29 @@ class UserPoolSignUpViewController: AWSMobileClientBaseViewController {
             print("Password is empty")
             return
         }
-        signUpUser(username: username, email: email, password: password)
+        signUpUser(username: username,
+                   email: email,
+                   phoneNumber: phoneNumberTF.text ?? "",
+                   password: password)
     }
 
-    func signUpUser(username: String, email: String, password: String) {
-        
+    @IBAction func alreadyHaveCodeAction(_ sender: Any) {
+        presentConfirmSignUpVC()
+    }
+
+    func signUpUser(username: String, email: String, phoneNumber: String, password: String) {
+
+        var userAttributes = ["email": email]
+        if !phoneNumber.isEmpty {
+            userAttributes["phone_number"] = phoneNumber
+        }
         AWSMobileClient.default().signUp(username: username,
                                          password: password,
-                                         userAttributes: ["email": email]) { (result, error) in
+                                         userAttributes: userAttributes) {
+                                            (result, error) in
 
                                             if let error = error {
-                                               print("SignIn - \(error)")
+                                                print("SignUp - \(error)")
                                                 self.showError(error)
                                             } else if let result = result {
                                                 self.checkSignUpStatus(result: result)
@@ -55,15 +68,15 @@ class UserPoolSignUpViewController: AWSMobileClientBaseViewController {
     func checkSignUpStatus(result: SignUpResult) {
         switch result.signUpConfirmationState {
         case .confirmed:
-            showConfirmSignUpMessage()
+            showConfirmedSignUpMessage()
         case .unconfirmed:
-            showUnConfirmSignUpMessage(result: result)
+            showUnConfirmedSignUpMessage(result: result)
         default:
             print("NA")
         }
     }
 
-    func showUnConfirmSignUpMessage(result: SignUpResult) {
+    func showUnConfirmedSignUpMessage(result: SignUpResult) {
         DispatchQueue.main.async {
             var message: String = "Please confirm the user"
             if let deliveryDetails = result.codeDeliveryDetails {
@@ -77,11 +90,7 @@ class UserPoolSignUpViewController: AWSMobileClientBaseViewController {
                                           preferredStyle: .alert)
             let action = UIAlertAction(title: "OK",
                                        style: .default) { action in
-
-                                        DispatchQueue.main.async {
-                                            self.navigationController?.popViewController(animated: true)
-                                        }
-
+                                        self.presentConfirmSignUpVC()
             }
             alert.addAction(action)
             self.present(alert, animated: true)
@@ -89,24 +98,66 @@ class UserPoolSignUpViewController: AWSMobileClientBaseViewController {
 
     }
 
-    func showConfirmSignUpMessage() {
+    func showConfirmedSignUpMessage() {
 
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "User signed up",
-                                          message: "Please signin to the app",
+            let alert = UIAlertController(title: "User signUp completed",
+                                          message: "Please signin to the app to continue.",
                                           preferredStyle: .alert)
             let action = UIAlertAction(title: "OK",
                                        style: .default) { action in
-
                                         DispatchQueue.main.async {
                                             self.navigationController?.popViewController(animated: true)
                                         }
-
             }
             alert.addAction(action)
             self.present(alert, animated: true)
         }
+    }
 
+    func presentConfirmSignUpVC() {
+        if let vc = UIStoryboard.init(name: "Main",
+                                      bundle: Bundle.main).instantiateViewController(withIdentifier: "UserPoolConfirmSignUpVCID") as? UserPoolConfirmSignUpViewController {
+            vc.userName = self.userNameTF.text ?? ""
+            vc.delegate = self
+            DispatchQueue.main.async {
+                self.present(vc, animated: true)
+            }
+        }
+    }
+
+    override func showError(_ error: Error) {
+        if let awsmobileClientError = error as? AWSMobileClientError {
+            switch awsmobileClientError {
+            case .usernameExists(let message):
+                showError(message)
+            case .invalidParameter(let message):
+                showError(message)
+            default:
+                super.showError(error)
+            }
+        } else {
+            super.showError(error)
+        }
     }
 
 }
+
+extension UserPoolSignUpViewController: ConfirmSignUpDelegate {
+
+    func confirmSignUpCancelled() {
+        DispatchQueue.main.async {
+            self.dismiss(animated: true)
+        }
+    }
+
+    func confirmSignUpSuccess(_ result: SignUpResult) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: true) {
+                self.checkSignUpStatus(result: result)
+            }
+        }
+
+    }
+}
+

@@ -13,6 +13,8 @@
 		B434704023DB992100564018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B434703D23DB992100564018 /* AppDelegate.swift */; };
 		B434704123DB992100564018 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B434703E23DB992100564018 /* SceneDelegate.swift */; };
 		B434704723DBAB6000564018 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B434704623DBAB6000564018 /* AuthType.swift */; };
+		B44AC59A23E4D74A006AA87E /* HostedUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AC59923E4D74A006AA87E /* HostedUIViewController.swift */; };
+		B44AC59C23E7FEE8006AA87E /* hostedUIConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B44AC59B23E7FEE8006AA87E /* hostedUIConfiguration.json */; };
 		B4F90D6823DD4EF80056341D /* ConfigurationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D6723DD4EF80056341D /* ConfigurationParser.swift */; };
 		B4F90D7E23DE9CF20056341D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7723DE9CF20056341D /* AuthViewController.swift */; };
 		B4F90D7F23DE9CF20056341D /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7823DE9CF20056341D /* CredentialsViewController.swift */; };
@@ -39,6 +41,8 @@
 		B434703D23DB992100564018 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B434703E23DB992100564018 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B434704623DBAB6000564018 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
+		B44AC59923E4D74A006AA87E /* HostedUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedUIViewController.swift; sourceTree = "<group>"; };
+		B44AC59B23E7FEE8006AA87E /* hostedUIConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hostedUIConfiguration.json; sourceTree = "<group>"; };
 		B4F90D6723DD4EF80056341D /* ConfigurationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationParser.swift; sourceTree = "<group>"; };
 		B4F90D7723DE9CF20056341D /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B4F90D7823DE9CF20056341D /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B44AC59823E4D737006AA87E /* HostedUI */ = {
+			isa = PBXGroup;
+			children = (
+				B44AC59923E4D74A006AA87E /* HostedUIViewController.swift */,
+			);
+			path = HostedUI;
+			sourceTree = "<group>";
+		};
 		B4F90D6623DD4EE50056341D /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +164,7 @@
 				B4F90D7923DE9CF20056341D /* HomeViewController.swift */,
 				B4F90D7A23DE9CF20056341D /* DropInUI */,
 				B4F90D7C23DE9CF20056341D /* UserPoolCustomUI */,
+				B44AC59823E4D737006AA87E /* HostedUI */,
 				B4F90D8323DE9D440056341D /* AWSMobileClientBaseViewController.swift */,
 			);
 			path = ViewControllers;
@@ -169,8 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				B4F90D7D23DE9CF20056341D /* UserPoolSignInViewController.swift */,
-				B4F90D9223DF47DC0056341D /* UserPoolSignUpViewController.swift */,
 				B4F90D9423DF47F90056341D /* UserPoolConfirmSignInViewController.swift */,
+				B4F90D9223DF47DC0056341D /* UserPoolSignUpViewController.swift */,
 				B4F90D9623DF48070056341D /* UserPoolConfirmSignUpViewController.swift */,
 			);
 			path = UserPoolCustomUI;
@@ -182,6 +195,7 @@
 				B4F90D8C23DEAFD30056341D /* dropInUIConfiguration.json */,
 				B4F90D8D23DEAFD30056341D /* customAuthUserPoolConfiguration.json */,
 				B4F90D8E23DEAFD30056341D /* userPoolConfiguration.json */,
+				B44AC59B23E7FEE8006AA87E /* hostedUIConfiguration.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -253,6 +267,7 @@
 				B434703423DB98B300564018 /* LaunchScreen.storyboard in Resources */,
 				B434703123DB98B300564018 /* Assets.xcassets in Resources */,
 				B434702F23DB98B100564018 /* Main.storyboard in Resources */,
+				B44AC59C23E7FEE8006AA87E /* hostedUIConfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +344,7 @@
 				B4F90D9323DF47DC0056341D /* UserPoolSignUpViewController.swift in Sources */,
 				B434704723DBAB6000564018 /* AuthType.swift in Sources */,
 				B4F90D7E23DE9CF20056341D /* AuthViewController.swift in Sources */,
+				B44AC59A23E4D74A006AA87E /* HostedUIViewController.swift in Sources */,
 				B434704123DB992100564018 /* SceneDelegate.swift in Sources */,
 				B4F90D8023DE9CF20056341D /* HomeViewController.swift in Sources */,
 				B4F90D9723DF48070056341D /* UserPoolConfirmSignUpViewController.swift in Sources */,

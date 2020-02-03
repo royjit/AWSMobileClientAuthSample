@@ -14,6 +14,9 @@ class AuthViewController: UIViewController {
     public var authType: AuthType!
     @IBOutlet weak var authStatus: UILabel!
 
+    @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateNavigationTitle()
@@ -33,6 +36,9 @@ class AuthViewController: UIViewController {
         case .customAuthUserPool:
             vc = UIStoryboard.init(name: "Main",
                                    bundle: Bundle.main).instantiateViewController(withIdentifier: "UserPoolSignInVCID")
+        case .hostedUI:
+            vc = UIStoryboard.init(name: "Main",
+                                   bundle: Bundle.main).instantiateViewController(withIdentifier: "HostedUISignInVCID")
         default:
             vc = nil
         }
@@ -55,6 +61,8 @@ class AuthViewController: UIViewController {
             self.title = "DropIn UI"
         case .customAuthUserPool:
             self.title = "Custom Auth with custom UI"
+        case .hostedUI:
+            self.title = "Hosted UI"
         case .none:
             self.title = "Undefined"
         }
@@ -71,6 +79,7 @@ class AuthViewController: UIViewController {
             if let state = userState {
                 print ("AWSMobileClient Initialize - \(state)")
                 self.updateStatus(state: state)
+                self.toggleButtons(state == .signedIn)
             }
         }
     }
@@ -78,6 +87,7 @@ class AuthViewController: UIViewController {
     func setupListener() {
         AWSMobileClient.default().addUserStateListener(self) { (state, info) in
             self.updateStatus(state: state)
+            self.toggleButtons(state == .signedIn)
         }
     }
 
@@ -87,5 +97,11 @@ class AuthViewController: UIViewController {
         }
     }
 
+    func toggleButtons(_ isSignedIn: Bool) {
+        DispatchQueue.main.async {
+            self.signInButton.isHidden = isSignedIn
+            self.signOutButton.isHidden = !isSignedIn
+        }
+    }
 }
 

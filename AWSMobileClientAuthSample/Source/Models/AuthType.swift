@@ -12,5 +12,6 @@ enum AuthType {
 
     case userpool
     case dropInUI
+    case hostedUI
     case customAuthUserPool
 }

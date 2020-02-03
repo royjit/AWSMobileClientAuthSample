@@ -9,7 +9,7 @@ The sample app is created in such a manner that you can test different auth conf
 When you pick an option from the view controller, the app initializes the AWSMobileClient using the configuration specific for the use case selected. You should not change the selection after this step as mentioned 
 [here](https://aws-amplify.github.io/docs/ios/manualsetup#configure-using-an-in-memory-object). If you want to test another auth flow, delete the app content from the simulator.
 
-### Steps to follow
+### Intial setup
 
 1. git clone the project
 1. cd to the cloned project
@@ -21,3 +21,6 @@ When you pick an option from the view controller, the app initializes the AWSMob
 #### Configuration setup for each flow
 
 1. [Username password flow with Custom UI](./Documentation/UserPoolCustomUI.md)
+1. [Passwordless authentication](./Documentation/CustomAuthWithUserPool.md)
+1. [Hosted UI authentication](./Documentation/DropInUI.md)
+1. [DropIn UI authentication](./Documentation/HostedUI.md)

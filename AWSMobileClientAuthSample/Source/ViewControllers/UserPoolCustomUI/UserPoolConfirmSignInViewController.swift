@@ -7,24 +7,49 @@
 //
 
 import UIKit
+import AWSMobileClient
+
+protocol ConfirmSignInDelegate: AnyObject {
+
+    func confirmSignInCancelled()
+
+    func confirmSignInSuccess(_ result: SignInResult)
+}
 
 class UserPoolConfirmSignInViewController: AWSMobileClientBaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var confrimSignInTF: UITextField!
 
-        // Do any additional setup after loading the view.
+    weak var delegate: ConfirmSignInDelegate?
+
+    @IBAction func confirmSignInAction(_ sender: Any) {
+
+        guard let response = confrimSignInTF.text else {
+            print("Confirm signIn response is empty")
+            return
+        }
+        confirmSignIn(response)
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelAction(_ sender: Any) {
+        self.delegate?.confirmSignInCancelled()
     }
-    */
+
+    func setDelegate(_ delegate: ConfirmSignInDelegate) {
+        self.delegate = delegate
+    }
+
+    func confirmSignIn(_ code: String) {
+        AWSMobileClient.default().confirmSignIn(challengeResponse: code) { (result, error) in
+            guard let result = result else {
+                if let error = error {
+                    print("confirmSignIn - \(error)")
+                    self.showError(error)
+                }
+                return
+            }
+            self.delegate?.confirmSignInSuccess(result)
+        }
+    }
 
 }

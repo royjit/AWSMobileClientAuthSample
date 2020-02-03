@@ -23,6 +23,10 @@ class HomeViewController: UIViewController {
          pushSignInViewController(.customAuthUserPool)
     }
 
+    @IBAction func hostedUIAction(_ sender: Any) {
+        pushSignInViewController(.hostedUI)
+    }
+
     func pushSignInViewController(_ authType: AuthType) {
         guard let vc = UIStoryboard.init(name: "Main",
                                          bundle: Bundle.main).instantiateViewController(withIdentifier: "AuthVCID") as? AuthViewController else {
@@ -32,4 +36,3 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-

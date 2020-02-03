@@ -23,4 +23,17 @@ class AWSMobileClientBaseViewController: UIViewController {
         }
     }
 
+    func showError(_ message: String) {
+
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error",
+                                          message: message,
+                                          preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK",
+                                       style: .default)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        }
+    }
+
 }

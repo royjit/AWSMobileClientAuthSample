@@ -1,4 +1,16 @@
+# DropIn Authentication UI for iOS 
 
+DropIn authentication UI for iOS provides an authentication UI using the native UI of iOS. You can use dropIn UI to authenticate a user
+using UserPools, Facebook or Google. 
+
+Please note that authenticating in DropIn UI with Facebook or Google just federate the identity with Cognito IdentityPool and it doesnot create
+a user in Cognito UserPools. If you want to authenticate using social providers like Facebook, Google, Amazon and also wants to create a user
+in Cognito UserPools, you have to use [hostedUI](./HostedUI.md).
+
+### Manual setup of configuration
+
+1. Create an empty file named `dropInUIConfiguration.json`.
+1. Add the following json into the file
 ```
 {
     "UserAgent": "aws-amplify/cli",
@@ -39,7 +51,14 @@
 }
 ```
 
+### Use Amplify CLI to create and manage configuration
 
+Instead of adding the configuration manually you can make use of Amplify CLI to create the necessary configuration. 
+Follow the steps mentioned [here](https://aws-amplify.github.io/docs/cli-toolchain/quickstart) to initialize the CLI. After that you can
+follow any of the steps below to configure auth. Following anyone of the step will create a json file called `awsconfiguration.json`, rename this
+file to `hostedUIConfiguration.json` for this project.
+Amplify iOS SDK for HostedUI can be found [here](https://aws-amplify.github.io/docs/ios/authentication#drop-in-auth). You have to follow the steps
+given under [Federated Identities](https://aws-amplify.github.io/docs/ios/authentication#federated-identities-social-sign-in), to setup each social providers.
 
 ```
 $ amplify add auth

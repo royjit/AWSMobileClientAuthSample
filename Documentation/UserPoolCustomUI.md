@@ -43,7 +43,7 @@ manually add the configuration file or follow the amplify CLI steps(recommended)
 
 ### Use Amplify CLI to create and manage configuration
 
-Instead of addin the configuration manually you can make use of Amplify CLI to create the necessary configuration. 
+Instead of adding the configuration manually you can make use of Amplify CLI to create the necessary configuration. 
 Follow the steps mentioned [here](https://aws-amplify.github.io/docs/cli-toolchain/quickstart) to initialize the CLI. After that you can
 follow any of the steps below to configure auth. Following anyone of the step will create a json file called `awsconfiguration.json`, rename this
 file to `userPoolConfiguration.json` for this project.

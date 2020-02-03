@@ -35,7 +35,7 @@ class AuthViewController: UIViewController {
                                    bundle: Bundle.main).instantiateViewController(withIdentifier: "DropInUISignInVCID")
         case .customAuthUserPool:
             vc = UIStoryboard.init(name: "Main",
-                                   bundle: Bundle.main).instantiateViewController(withIdentifier: "UserPoolSignInVCID")
+                                   bundle: Bundle.main).instantiateViewController(withIdentifier: "CustomAuthSignInVCID")
         case .hostedUI:
             vc = UIStoryboard.init(name: "Main",
                                    bundle: Bundle.main).instantiateViewController(withIdentifier: "HostedUISignInVCID")

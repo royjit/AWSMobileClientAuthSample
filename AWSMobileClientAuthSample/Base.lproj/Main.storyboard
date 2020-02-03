@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afT-kL-mkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="971"/>
+            <point key="canvasLocation" x="1954" y="976"/>
         </scene>
         <!--Credentials View Controller-->
         <scene sceneID="Wff-WG-lTz">
@@ -448,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsu-Zr-ZSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3943" y="65"/>
+            <point key="canvasLocation" x="3386" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aCZ-iA-2lW">
@@ -603,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTg-ju-oZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="1683"/>
+            <point key="canvasLocation" x="2553" y="1824"/>
         </scene>
         <!--User Pool Confirm Sign Up View Controller-->
         <scene sceneID="EdX-Vv-Ix2">
@@ -671,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AX-H6-Eag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="1683"/>
+            <point key="canvasLocation" x="1876" y="1824"/>
         </scene>
         <!--HostedUI View Controller-->
         <scene sceneID="9mD-uG-Rx0">
@@ -774,10 +774,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hg-xY-tsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3223" y="976"/>
+            <point key="canvasLocation" x="4209" y="151"/>
+        </scene>
+        <!--Custom Auth View Controller-->
+        <scene sceneID="1vf-N5-X4D">
+            <objects>
+                <viewController storyboardIdentifier="CustomAuthSignInVCID" id="XHi-rw-yd4" customClass="CustomAuthViewController" customModule="AWSMobileClientAuthSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WB8-Yp-Tna">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G9l-sw-XbP">
+                                <rect key="frame" x="20" y="20" width="335" height="254.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Status&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5y-aj-7jg">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jS-Dt-tVO">
+                                        <rect key="frame" x="0.0" y="40.5" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMq-37-Bhl">
+                                        <rect key="frame" x="0.0" y="94.5" width="335" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DI7-ME-oQm"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="SignIn">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signInAction:" destination="XHi-rw-yd4" eventType="touchUpInside" id="Hn7-5X-oYt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kax-kg-TRc">
+                                        <rect key="frame" x="0.0" y="154.5" width="335" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="pMQ-kZ-bV7"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="SignUp">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="6TH-YW-yc7" kind="show" id="kuL-AM-ht3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-M7-sul">
+                                        <rect key="frame" x="0.0" y="214.5" width="335" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XPP-3Z-eB5"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Tokens and Credentials">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="PBO-uo-9fR" kind="show" id="sUi-Ew-vXC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G9l-sw-XbP" firstAttribute="leading" secondItem="EUi-SP-MQB" secondAttribute="leading" constant="20" id="1ui-89-60y"/>
+                            <constraint firstItem="G9l-sw-XbP" firstAttribute="top" secondItem="EUi-SP-MQB" secondAttribute="top" constant="20" id="A2l-3v-T8u"/>
+                            <constraint firstItem="EUi-SP-MQB" firstAttribute="trailing" secondItem="G9l-sw-XbP" secondAttribute="trailing" constant="20" id="n3K-RW-eZs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EUi-SP-MQB"/>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="R5y-aj-7jg" id="BIc-2o-f5R"/>
+                        <outlet property="userNameTF" destination="3jS-Dt-tVO" id="BH4-gD-nc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZU-Ua-xxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3060" y="976"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tbA-Pe-cQd"/>
+        <segue reference="kuL-AM-ht3"/>
+        <segue reference="sUi-Ew-vXC"/>
     </inferredMetricsTieBreakers>
 </document>

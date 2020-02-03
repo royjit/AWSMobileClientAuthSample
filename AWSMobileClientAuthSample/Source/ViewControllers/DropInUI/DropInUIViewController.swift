@@ -10,7 +10,7 @@ import UIKit
 import AWSMobileClient
 
 class DropInUIViewController: AWSMobileClientBaseViewController {
-
+    
     @IBOutlet weak var statusLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,22 +19,25 @@ class DropInUIViewController: AWSMobileClientBaseViewController {
     }
     
     @IBAction func signInAction(_ sender: Any) {
-
-        AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, { (userState, error) in
-            guard let error = error else {
-                return
-            }
-            print("SignIn - \(error)")
-            self.showError(error)
+        
+        let signInOptions = SignInUIOptions(canCancel: true)
+        AWSMobileClient.default().showSignIn(navigationController: self.navigationController!,
+                                             signInUIOptions: signInOptions,
+                                             { (userState, error) in
+                                                guard let error = error else {
+                                                    return
+                                                }
+                                                print("SignIn - \(error)")
+                                                self.showError(error)
         })
     }
-
+    
     func updateStatus(state: UserState) {
         DispatchQueue.main.async {
             self.statusLabel.text = "Status: \(state.rawValue)"
         }
     }
-
+    
     func setupListener() {
         AWSMobileClient.default().addUserStateListener(self) { (state, info) in
             self.updateStatus(state: state)

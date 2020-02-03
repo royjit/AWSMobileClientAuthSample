@@ -16,6 +16,8 @@
 		B44AC59A23E4D74A006AA87E /* HostedUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AC59923E4D74A006AA87E /* HostedUIViewController.swift */; };
 		B44AC59C23E7FEE8006AA87E /* hostedUIConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B44AC59B23E7FEE8006AA87E /* hostedUIConfiguration.json */; };
 		B4B6324B23E8CCC20092255A /* CustomAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6324A23E8CCC20092255A /* CustomAuthViewController.swift */; };
+		B4B6324F23E8D5070092255A /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6324E23E8D5070092255A /* NormalButton.swift */; };
+		B4B6325123E8D5D10092255A /* WarningButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6325023E8D5D10092255A /* WarningButton.swift */; };
 		B4F90D6823DD4EF80056341D /* ConfigurationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D6723DD4EF80056341D /* ConfigurationParser.swift */; };
 		B4F90D7E23DE9CF20056341D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7723DE9CF20056341D /* AuthViewController.swift */; };
 		B4F90D7F23DE9CF20056341D /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F90D7823DE9CF20056341D /* CredentialsViewController.swift */; };
@@ -45,6 +47,8 @@
 		B44AC59923E4D74A006AA87E /* HostedUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedUIViewController.swift; sourceTree = "<group>"; };
 		B44AC59B23E7FEE8006AA87E /* hostedUIConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hostedUIConfiguration.json; sourceTree = "<group>"; };
 		B4B6324A23E8CCC20092255A /* CustomAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthViewController.swift; sourceTree = "<group>"; };
+		B4B6324E23E8D5070092255A /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
+		B4B6325023E8D5D10092255A /* WarningButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningButton.swift; sourceTree = "<group>"; };
 		B4F90D6723DD4EF80056341D /* ConfigurationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationParser.swift; sourceTree = "<group>"; };
 		B4F90D7723DE9CF20056341D /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B4F90D7823DE9CF20056341D /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				B4F90D6723DD4EF80056341D /* ConfigurationParser.swift */,
+				B4B6324E23E8D5070092255A /* NormalButton.swift */,
+				B4B6325023E8D5D10092255A /* WarningButton.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -351,12 +357,14 @@
 				B4B6324B23E8CCC20092255A /* CustomAuthViewController.swift in Sources */,
 				B4F90D8423DE9D440056341D /* AWSMobileClientBaseViewController.swift in Sources */,
 				B4F90D8123DE9CF20056341D /* DropInUIViewController.swift in Sources */,
+				B4B6324F23E8D5070092255A /* NormalButton.swift in Sources */,
 				B434704023DB992100564018 /* AppDelegate.swift in Sources */,
 				B4F90D7F23DE9CF20056341D /* CredentialsViewController.swift in Sources */,
 				B4F90D9323DF47DC0056341D /* UserPoolSignUpViewController.swift in Sources */,
 				B434704723DBAB6000564018 /* AuthType.swift in Sources */,
 				B4F90D7E23DE9CF20056341D /* AuthViewController.swift in Sources */,
 				B44AC59A23E4D74A006AA87E /* HostedUIViewController.swift in Sources */,
+				B4B6325123E8D5D10092255A /* WarningButton.swift in Sources */,
 				B434704123DB992100564018 /* SceneDelegate.swift in Sources */,
 				B4F90D8023DE9CF20056341D /* HomeViewController.swift in Sources */,
 				B4F90D9723DF48070056341D /* UserPoolConfirmSignUpViewController.swift in Sources */,

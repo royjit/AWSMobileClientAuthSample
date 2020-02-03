@@ -15,10 +15,6 @@ class UserPoolSignInViewController: AWSMobileClientBaseViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
 
-    @IBOutlet weak var confrimSignInTF: UITextField!
-    @IBOutlet weak var signUpUsernameTF: UITextField!
-    @IBOutlet weak var confirmSignUpTF: UITextField!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "SignIn"

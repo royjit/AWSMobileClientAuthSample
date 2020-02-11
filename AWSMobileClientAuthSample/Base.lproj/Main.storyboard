@@ -114,7 +114,7 @@
                                             <action selector="signInAction:" destination="gje-DE-g9z" eventType="touchUpInside" id="GBB-uH-Vj4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izE-sH-V9R">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izE-sH-V9R" customClass="WarningButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="100.5" width="335" height="40"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -693,7 +693,7 @@
                                             <constraint firstAttribute="height" constant="40" id="kLO-TO-Lat"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="SignIn Userpools">
+                                        <state key="normal" title="SignIn">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -767,6 +767,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ljO-mJ-zOw"/>
                     </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="5Lt-Ow-7OS" id="QE6-rp-dFF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hg-xY-tsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -859,6 +862,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kuL-AM-ht3"/>
-        <segue reference="sUi-Ew-vXC"/>
+        <segue reference="gli-i5-xMQ"/>
     </inferredMetricsTieBreakers>
 </document>

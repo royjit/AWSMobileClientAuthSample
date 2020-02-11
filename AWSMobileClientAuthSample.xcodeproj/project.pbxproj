@@ -515,6 +515,7 @@
 			baseConfigurationReference = F0B5F28DAC374DA72F53D5BA /* Pods-AWSMobileClientAuthSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AWSMobileClientAuthSample/AWSMobileClientAuthSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AWSMobileClientAuthSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -533,6 +534,7 @@
 			baseConfigurationReference = 55A7D9AC7EA7656B96593942 /* Pods-AWSMobileClientAuthSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AWSMobileClientAuthSample/AWSMobileClientAuthSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AWSMobileClientAuthSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

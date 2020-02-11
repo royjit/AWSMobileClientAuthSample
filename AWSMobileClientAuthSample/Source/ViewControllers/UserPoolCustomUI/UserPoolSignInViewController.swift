@@ -110,6 +110,23 @@ class UserPoolSignInViewController: AWSMobileClientBaseViewController {
             self.updateStatus(state: state)
         }
     }
+
+    override func showError(_ error: Error) {
+        if let awsmobileClientError = error as? AWSMobileClientError {
+            switch awsmobileClientError {
+            case .userNotConfirmed(let message):
+                showError(message)
+            case .invalidParameter(let message):
+                showError(message)
+            case .userNotFound(let message):
+                showError(message)
+            default:
+                super.showError(error)
+            }
+        } else {
+            super.showError(error)
+        }
+    }
 }
 
 extension UserPoolSignInViewController: ConfirmSignInDelegate {

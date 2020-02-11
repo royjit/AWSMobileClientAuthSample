@@ -22,5 +22,5 @@ When you pick an option from the view controller, the app initializes the AWSMob
 
 1. [Username password flow with Custom UI](./Documentation/UserPoolCustomUI.md)
 1. [Passwordless authentication](./Documentation/CustomAuthWithUserPool.md)
-1. [Hosted UI authentication](./Documentation/DropInUI.md)
-1. [DropIn UI authentication](./Documentation/HostedUI.md)
+1. [Hosted UI authentication](./Documentation/HostedUI.md)
+1. [DropIn UI authentication](./Documentation/DropInUI.md)

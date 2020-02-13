@@ -7,55 +7,12 @@ Please note that authenticating in DropIn UI with Facebook or Google just federa
 a user in Cognito UserPools. If you want to authenticate using social providers like Facebook, Google, Amazon and also wants to create a user
 in Cognito UserPools, you have to use [hostedUI](./HostedUI.md).
 
-### Manual setup of configuration
-
-1. Create an empty file named `dropInUIConfiguration.json`.
-1. Add the following json into the file
-```
-{
-    "UserAgent": "aws-amplify/cli",
-    "Version": "0.1.0",
-    "IdentityManager": {
-        "Default": {}
-    },
-    "CredentialsProvider": {
-        "CognitoIdentity": {
-            "Default": {
-                "PoolId": "<xxxx>",
-                "Region": "<xxxx>"
-            }
-        }
-    },
-    "CognitoUserPool": {
-        "Default": {
-            "PoolId": "<xxxx>",
-            "AppClientId": "<xxxx>",
-            "AppClientSecret": "<xxxx>",
-            "Region": "<xxxx>"
-        }
-    },
-    "GoogleSignIn": {
-        "Permissions": "email,profile,openid",
-        "ClientId-WebApp": "<xxxx>",
-        "ClientId-iOS": "<xxxx>"
-    },
-    "FacebookSignIn": {
-        "AppId": "<xxxx>",
-        "Permissions": "public_profile"
-    },
-    "Auth": {
-        "Default": {
-            "authenticationFlowType": "USER_SRP_AUTH"
-        }
-    }
-}
-```
 
 ### Use Amplify CLI to create and manage configuration
 
 Instead of adding the configuration manually you can make use of Amplify CLI to create the necessary configuration. 
 Follow the steps mentioned [here](https://aws-amplify.github.io/docs/cli-toolchain/quickstart) to initialize the CLI. After that you can
-follow any of the steps below to configure auth. Following anyone of the step will create a json file called `awsconfiguration.json`, rename this
+follow the steps below to configure auth which will create a json file called `awsconfiguration.json`, rename this
 file to `hostedUIConfiguration.json` for this project.
 Amplify iOS SDK for HostedUI can be found [here](https://aws-amplify.github.io/docs/ios/authentication#drop-in-auth). You have to follow the steps
 given under [Federated Identities](https://aws-amplify.github.io/docs/ios/authentication#federated-identities-social-sign-in), to setup each social providers.
@@ -124,4 +81,46 @@ Current Environment: beta
 | -------- | ----------------------- | --------- | ----------------- |
 | Auth     | <xxxxxxxxxxxxxxxxxxxxx> | Create    | awscloudformation |
 ? Are you sure you want to continue? Yes
+```
+
+After following the CLI the configuration looks like this:
+
+```
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "<xxxx>",
+                "Region": "<xxxx>"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "<xxxx>",
+            "AppClientId": "<xxxx>",
+            "AppClientSecret": "<xxxx>",
+            "Region": "<xxxx>"
+        }
+    },
+    "GoogleSignIn": {
+        "Permissions": "email,profile,openid",
+        "ClientId-WebApp": "<xxxx>",
+        "ClientId-iOS": "<xxxx>"
+    },
+    "FacebookSignIn": {
+        "AppId": "<xxxx>",
+        "Permissions": "public_profile"
+    },
+    "Auth": {
+        "Default": {
+            "authenticationFlowType": "USER_SRP_AUTH"
+        }
+    }
+}
 ```

@@ -3,57 +3,7 @@
 Cognito provides a customizable authentication page for signin and signup workflows. Using HostedUI you can create a user in userpools when
 the user signin. More details can be found [here](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html).
 
-The sample app require AWS Cognito configurations for the auth flow to work. The configuration file should be named "hostedUIConfiguration.json". You can 
-manually add the configuration file or follow the amplify CLI steps(recommended).
-
-### Manual setup of configuration
-
-1. Create an empty file named `hostedUIConfiguration.json`.
-1. Add the following json into the file
-```
-{
-    "UserAgent": "aws-amplify/cli",
-    "Version": "0.1.0",
-    "IdentityManager": {
-        "Default": {}
-    },
-    "CredentialsProvider": {
-        "CognitoIdentity": {
-            "Default": {
-                "PoolId": "xxxx",
-                "Region": "xxxx"
-            }
-        }
-    },
-    "CognitoUserPool": {
-        "Default": {
-            "PoolId": "xxxx",
-            "AppClientId": "xxxx",
-            "AppClientSecret": "xxxx",
-            "Region": "us-east-1"
-        }
-    },
-    "Auth": {
-        "Default": {
-            "OAuth": {
-                "WebDomain": "xxxx",
-                "AppClientId": "xxxx",
-                "AppClientSecret": "xxxx",
-                "SignInRedirectURI": "xxxx",
-                "SignOutRedirectURI": "xxxx",
-                "Scopes": [
-                    "phone",
-                    "email",
-                    "openid",
-                    "profile",
-                    "aws.cognito.signin.user.admin"
-                ]
-            },
-            "authenticationFlowType": "USER_SRP_AUTH"
-        }
-    }
-}
-```
+The sample app require AWS Cognito configurations for the auth flow to work. The configuration file should be named "hostedUIConfiguration.json". Follow the steps given below to prepare the configuration file:
 
 ### Use Amplify CLI to create and manage configuration
 
@@ -110,4 +60,51 @@ Current Environment: beta
 | -------- | --------------- | --------- | ----------------- |
 | Auth     | <xxxxxxxxxxxxx> | Create    | awscloudformation |
 ? Are you sure you want to continue? Yes
+```
+
+After following the CLI the configuration looks like this:
+
+```
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "xxxx",
+                "Region": "xxxx"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "xxxx",
+            "AppClientId": "xxxx",
+            "AppClientSecret": "xxxx",
+            "Region": "us-east-1"
+        }
+    },
+    "Auth": {
+        "Default": {
+            "OAuth": {
+                "WebDomain": "xxxx",
+                "AppClientId": "xxxx",
+                "AppClientSecret": "xxxx",
+                "SignInRedirectURI": "xxxx",
+                "SignOutRedirectURI": "xxxx",
+                "Scopes": [
+                    "phone",
+                    "email",
+                    "openid",
+                    "profile",
+                    "aws.cognito.signin.user.admin"
+                ]
+            },
+            "authenticationFlowType": "USER_SRP_AUTH"
+        }
+    }
+}
 ```

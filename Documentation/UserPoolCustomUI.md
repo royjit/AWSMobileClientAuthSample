@@ -3,43 +3,7 @@
 Username password auth flow is the normal authentication mechanism using username and password. This flow internally uses the 
 SRP_A flow of `AWS Cognito userpools` explained [here](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html).
 
-The sample app require AWS Cognito configurations for the auth flow to work. The configuration file should be named "userPoolConfiguration.json". You can 
-manually add the configuration file or follow the amplify CLI steps(recommended).
-
-### Manual setup of configuration
-
-1. Create an empty file named `userPoolConfiguration.json`.
-1. Add the following json into the file
-```
-{
-    "UserAgent": "aws-amplify/cli",
-    "Version": "0.1.0",
-    "IdentityManager": {
-        "Default": {}
-    },
-    "CredentialsProvider": {
-        "CognitoIdentity": {
-            "Default": {
-                "PoolId": "<Replace ME>",
-                "Region": "<Replace ME>"
-            }
-        }
-    },
-    "CognitoUserPool": {
-        "Default": {
-            "PoolId": "<Replace ME>",
-            "AppClientId": "<Replace ME>",
-            "AppClientSecret": "<Replace ME>",
-            "Region": "<Replace ME>"
-        }
-    },
-    "Auth": {
-        "Default": {
-            "authenticationFlowType": "USER_SRP_AUTH"
-        }
-    }
-}
-```
+The sample app require AWS Cognito configurations for the auth flow to work. The configuration file should be named "userPoolConfiguration.json". Follow the steps given below to prepare the configuration file:
 
 ### Use Amplify CLI to create and manage configuration
 
@@ -126,4 +90,37 @@ Current Environment: beta
 | -------- | ----------------------- | --------- | ----------------- |
 | Auth     | xxxxxxxxxxx | Create    | awscloudformation |
 ? Are you sure you want to continue? Yes
+```
+
+After following the CLI the configuration looks like this:
+
+```
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "<Replace ME>",
+                "Region": "<Replace ME>"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "<Replace ME>",
+            "AppClientId": "<Replace ME>",
+            "AppClientSecret": "<Replace ME>",
+            "Region": "<Replace ME>"
+        }
+    },
+    "Auth": {
+        "Default": {
+            "authenticationFlowType": "USER_SRP_AUTH"
+        }
+    }
+}
 ```

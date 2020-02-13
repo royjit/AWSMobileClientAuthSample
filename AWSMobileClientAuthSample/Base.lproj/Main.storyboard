@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="duc-GP-u0r">
-                                <rect key="frame" x="20" y="20" width="335" height="200.5"/>
+                                <rect key="frame" x="20" y="20" width="335" height="260.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Status&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09f-f1-Eai">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -148,6 +148,20 @@
                                             <segue destination="PBO-uo-9fR" kind="show" id="tbA-Pe-cQd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhe-ms-bR6" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="220.5" width="335" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jCp-Cy-qFz"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Invoke AWS services">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="LDA-tz-zvs" kind="show" id="kh2-Xe-NPe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -168,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCY-9d-plB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796.25" y="137.5"/>
+            <point key="canvasLocation" x="1751" y="105"/>
         </scene>
         <!--User Pool Sign In View Controller-->
         <scene sceneID="HpP-up-ZED">
@@ -873,9 +887,80 @@
             </objects>
             <point key="canvasLocation" x="3060" y="976"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ueh-x5-R2M">
+            <objects>
+                <viewController id="LDA-tz-zvs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UQC-V8-w0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WKJ-3n-Rup">
+                                <rect key="frame" x="20" y="178.5" width="335" height="290.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick one of the use case:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCF-G8-fw3">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-Zk-jeZ" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50.5" width="335" height="60"/>
+                                        <color key="backgroundColor" red="0.1209238527" green="0.65878516679999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="i6F-QR-Zrd"/>
+                                        </constraints>
+                                        <state key="normal" title="AWS S3 ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="userPoolSignInAction:" destination="LDA-tz-zvs" eventType="touchUpInside" id="bnD-0K-SSf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyx-J9-qOb" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140.5" width="335" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="AWS API Gateway">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="customAuthUserPoolAction:" destination="LDA-tz-zvs" eventType="touchUpInside" id="G54-W6-baS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7h-8a-UfC" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="230.5" width="335" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="AWS AppSync">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hostedUIAction:" destination="LDA-tz-zvs" eventType="touchUpInside" id="5mO-tV-Auo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="w7h-8a-UfC" firstAttribute="height" secondItem="eJB-Zk-jeZ" secondAttribute="height" id="jY7-so-2w3"/>
+                                    <constraint firstItem="Wyx-J9-qOb" firstAttribute="height" secondItem="eJB-Zk-jeZ" secondAttribute="height" id="x98-cR-Vkp"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LsC-hN-qgz" firstAttribute="trailing" secondItem="WKJ-3n-Rup" secondAttribute="trailing" constant="20" id="Uaq-OW-iVi"/>
+                            <constraint firstItem="WKJ-3n-Rup" firstAttribute="centerY" secondItem="UQC-V8-w0Y" secondAttribute="centerY" id="Xle-8p-ugi"/>
+                            <constraint firstItem="WKJ-3n-Rup" firstAttribute="leading" secondItem="LsC-hN-qgz" secondAttribute="leading" constant="20" id="lGU-gK-WSz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LsC-hN-qgz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vq5-GP-Dhy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bON-0u-jNC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="-664"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kuL-AM-ht3"/>
-        <segue reference="gli-i5-xMQ"/>
+        <segue reference="tbA-Pe-cQd"/>
     </inferredMetricsTieBreakers>
 </document>

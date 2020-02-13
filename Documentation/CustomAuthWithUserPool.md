@@ -4,43 +4,7 @@ Passwordless authentication flow is a two step auth flow where in the first step
 back with a challenge. This challenge can be a captcha challenge, OTP etc.. which is custom defined by the developer. On verifying the challenge successfully
 the user is authenticated. For this sample app the challenge is same and hard coded. Details of custom auth in cognito can be found [here](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html).
 
-The sample app require AWS Cognito configurations for the auth flow to work. The configuration file should be named "customAuthUserPoolConfiguration.json". You can 
-manually add the configuration file or follow the amplify CLI steps(recommended).
-
-### Manual setup of configuration
-
-1. Create an empty file named `customAuthUserPoolConfiguration.json`.
-1. Add the following json into the file
-```
-{
-    "UserAgent": "aws-amplify/cli",
-    "Version": "0.1.0",
-    "IdentityManager": {
-        "Default": {}
-    },
-    "CredentialsProvider": {
-        "CognitoIdentity": {
-            "Default": {
-                "PoolId": "<xxxxx>",
-                "Region": "<xxxxx>"
-            }
-        }
-    },
-    "CognitoUserPool": {
-        "Default": {
-            "PoolId": "<xxxxx>",
-            "AppClientId": "<xxxxx>",
-            "AppClientSecret": "<xxxxx>",
-            "Region": "<xxxxx>"
-        }
-    },
-    "Auth": {
-        "Default": {
-            "authenticationFlowType": "CUSTOM_AUTH"
-        }
-    }
-}
-```
+The sample app require AWS Cognito configurations for the auth flow to work. The configuration file should be named "customAuthUserPoolConfiguration.json". Follow the steps given below to prepare the configuration file:
 
 ### Use Amplify CLI to create and manage configuration
 
@@ -173,4 +137,37 @@ exports.handler = (event, context, callback) => {
     createAuthChallenge(event);
     callback(null, event);
 };
+```
+
+After following the CLI the configuration looks like this:
+
+```
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "<xxxxx>",
+                "Region": "<xxxxx>"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "<xxxxx>",
+            "AppClientId": "<xxxxx>",
+            "AppClientSecret": "<xxxxx>",
+            "Region": "<xxxxx>"
+        }
+    },
+    "Auth": {
+        "Default": {
+            "authenticationFlowType": "CUSTOM_AUTH"
+        }
+    }
+}
 ```

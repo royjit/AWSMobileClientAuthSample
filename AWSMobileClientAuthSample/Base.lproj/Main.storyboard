@@ -16,15 +16,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T0L-MB-jFt">
-                                <rect key="frame" x="20" y="168.5" width="335" height="330"/>
+                                <rect key="frame" x="20" y="143.5" width="335" height="380.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a use case given below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfK-Lc-mY0">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrr-oN-xkq" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="335" height="60"/>
                                         <color key="backgroundColor" red="0.12092385267921413" green="0.65878516683438582" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Rrf-uy-Y99"/>
                                         </constraints>
-                                        <state key="normal" title="Userpool signIn with custom UI">
+                                        <state key="normal" title="Username / Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -32,33 +38,33 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdQ-2r-vef" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="335" height="60"/>
+                                        <rect key="frame" x="0.0" y="140.5" width="335" height="60"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Custom Auth Userpool with Custom UI">
+                                        <state key="normal" title="Passwordless (Two step auth)">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="customAuthUserPoolAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCj-CA-epQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqq-B4-TNF" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="180" width="335" height="60"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="DropIn UI">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="dropInUIAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UsQ-BO-xhS"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7V-Sa-wQP" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="270" width="335" height="60"/>
+                                        <rect key="frame" x="0.0" y="230.5" width="335" height="60"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="HostedUI">
+                                        <state key="normal" title="SignIn with Social provider with HostedUI">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="hostedUIAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qGC-S0-ZbE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqq-B4-TNF" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="320.5" width="335" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Social provider with Native UI">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dropInUIAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UsQ-BO-xhS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -678,7 +684,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-li-Mgo">
-                                <rect key="frame" x="20" y="20" width="335" height="320.5"/>
+                                <rect key="frame" x="20" y="20" width="335" height="407.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Status&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lt-Ow-7OS">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -686,8 +692,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwt-ro-p5I">
+                                        <rect key="frame" x="0.0" y="40.5" width="335" height="67"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">HostedUI is provided by Cognito User pool. This is a webpage shown in a viewcontroller, you can configure the view such that the hostedUI shows only the required provider.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fF-sT-Fnn" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40.5" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="127.5" width="335" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="kLO-TO-Lat"/>
@@ -701,7 +715,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDS-jG-jQQ" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100.5" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="187.5" width="335" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="hT2-M9-BdV"/>
@@ -715,7 +729,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN5-MK-xpm" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="160.5" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="247.5" width="335" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ccw-NU-6jj"/>
@@ -729,7 +743,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmJ-h9-BQH" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="220.5" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="307.5" width="335" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="hXd-UI-3ni"/>
@@ -743,7 +757,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1m-fb-fkI" customClass="NormalButton" customModule="AWSMobileClientAuthSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="280.5" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="367.5" width="335" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iwc-66-fC3"/>

@@ -18,9 +18,31 @@ When you pick an option from the view controller, the app initializes the AWSMob
 1. Follow the steps from the list below for each use case to create the configuration files.
 
 
-#### Configuration setup for each flow
+#### Follow the steps in the links below for different Use cases
 
-1. [Username password flow with Custom UI](./Documentation/UserPoolCustomUI.md)
+1. [Authenticate with username and password using my own UI.](./Documentation/UserPoolCustomUI.md)
+This use case covers the following:
+* Authentication with username password
+* Register a user to user pool
+* Uses custom UI for all the task
+* Get credentials after authentication
 1. [Passwordless authentication](./Documentation/CustomAuthWithUserPool.md)
+This use case covers the following:
+* Authentication with username and as a second challenge the user enters a verification code. 
+* Register a user to user pool
+* Uses custom UI for all the task
+* Get credentials after authentication
 1. [Hosted UI authentication](./Documentation/HostedUI.md)
+This use case covers the following:
+* You donot need to worry about the UI. User pool provides a webview that will be presented inside your app.
+* SignIn with username password
+* SignIn with social provider
+* Authentication with username password or using social provider will create a user in user pool
+* Get credentials after authentication
 1. [DropIn UI authentication](./Documentation/DropInUI.md)
+This use case covers the following:
+* You donot need to worry about the UI. The SDK provide native UI which can be presented inside your app
+* SignIn with username password
+* SignIn with social provider
+* Authentication with username password will create a user in user pool but authenticate with social provider will not create a user
+* Get credentials after authentication

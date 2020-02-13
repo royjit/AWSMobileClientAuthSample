@@ -16,9 +16,6 @@ class WarningButton: UIButton {
     }
 
     private func customizeUI() {
-        if let label = titleLabel {
-            label.font = UIFont.boldSystemFont(ofSize: 20)
-        }
         layer.cornerRadius = 10
         layer.backgroundColor = #colorLiteral(red: 1, green: 0.1764705882, blue: 0.3333333333, alpha: 1).cgColor
     }
